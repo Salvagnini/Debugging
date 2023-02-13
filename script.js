@@ -48,44 +48,41 @@
 // виправити код   count('5+3') повертає вираз 53
 
 
-// function count(expression) {
-//   function getValues(expression) {
-//     let values = [...expression]
-//     return values;
-//   }
-//     let values = getValues(expression);
-//     switch (values[1]) {
-//       case '+':
-//       return showResult(sum(values));
-//       case '-':
-//       return showResult(subtract(values));
-//       case '*':
-//       return showResult(multiplay(values));
-//       case "/":
-//       return showResult(divide(values));
-//   }
-//     function showResult(values) {
-//     return values;
-//     }
-// }
-//   function sum(values) {
-//     return +values[0] + +values[2];
-//   }
-//   function subtract(values) {
-//     return +values[0] - +values[2];
-//   }
-//   function multiplay(values) {
-//     return +values[0] * +values[2];
-//   }
-//   function divide(values) {
-//     return +values[0] / +values[2];
-// }
-// function  showResult(values) {
-//   alert(values)
-//   document.write(values)
-//   console.log(values);
-// }
-//     count('5+3');
+function count(expression) {
+  function getValues(expression) {
+    let values = [...expression]
+    return values;
+  }
+    let values = getValues(expression);
+    switch (values[1]) {
+      case '+':
+      return showResult(sum(values));
+      case '-':
+      return showResult(subtract(values));
+      case '*':
+      return showResult(multiplay(values));
+      case "/":
+      return showResult(divide(values));
+  }
+}
+  function sum(values) {
+    return +values[0] + +values[2];
+  }
+  function subtract(values) {
+    return +values[0] - +values[2];
+  }
+  function multiplay(values) {
+    return +values[0] * +values[2];
+  }
+  function divide(values) {
+    return +values[0] / +values[2];
+}
+function  showResult(values) {
+  alert(values)
+  document.write(values)
+  console.log(values);
+}
+    count('5+3');
 
 
 
@@ -199,30 +196,30 @@
 
 // *************4*************
 
-function MakeUsers(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function MakeUsers(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-let user = new MakeUsers('Miki');
+// let user = new MakeUsers('Miki');
 
-function showMovie(user) {
-  if (user.age >= 18) {
-    alert('You can watch this movie');
-  }
+// function showMovie(user) {
+//   if (user.age >= 18) {
+//     alert('You can watch this movie');
+//   }
   
-  if (user.age <= 18) {
-    alert('Sorry, you are too young');
-  }
-  try {
-    if (user.age === undefined)
-    throw new Error("Age not determined");
-  }
-  finally {
-    user.age = prompt("How old are you ?");
-    showMovie(user);
-  }
-}
+//   if (user.age <= 18) {
+//     alert('Sorry, you are too young');
+//   }
+//   try {
+//     if (user.age === undefined)
+//     throw new Error("Age not determined");
+//   }
+//   finally {
+//     user.age = prompt("How old are you ?");
+//     showMovie(user);
+//   }
+// }
 
-showMovie(user);
+// showMovie(user);
 
